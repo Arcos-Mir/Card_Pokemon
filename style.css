@@ -1,0 +1,388 @@
+
+
+.charizard {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.perspective {
+    perspective: 1000px;
+}
+
+.card_fondo {
+    height: 200px;
+    width: 150px;
+    background-color: #ffe659;
+    border-radius: 5%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .205);
+    cursor: pointer;
+}
+
+.card_fondo::before {
+    content: "";
+    height: 190px;
+    width: 140px;
+    background-image: url(img/fondo.jpg);
+    background-size: cover;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 1;
+    margin-left: calc((150px - 140px)/2);
+}
+
+.card_fondo::after {
+    content: "";
+    position: absolute;
+    height: 350px;
+    width: 50px;
+    background-image: linear-gradient(black, red);
+    margin-left: calc((150px - 50px)/2);
+    animation: rotar 2s linear infinite;
+    visibility: hidden;
+}
+
+.perspective:hover .card_fondo::after{
+    visibility: visible;
+}
+
+@keyframes rotar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.fase2 {
+    position: absolute;
+    background-image: url(img/Charmeleon.png);
+    background-size: cover; 
+    height: 20px;
+    width: 20px;
+    z-index: 3;
+    bottom: 175px;
+    margin-left: 13px;
+    border-radius: 50%;
+}
+
+.fase2:hover {
+    background-image: url(img/charmeleon.gif);
+    border: 1px solid darkred;
+}
+
+.name {
+    position: absolute;
+    z-index: 3;
+    bottom: 168px;
+    margin-left: 35px;
+}
+
+.name > h2 {
+    font-size: 12px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.level {
+    position: absolute;
+    z-index: 3;
+    bottom: 171px;
+    margin-left: 87px;
+}
+
+.level h6 {
+    font-size: 4px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.power {
+    position: absolute;
+    z-index: 3;
+    bottom: 160px;
+    margin-left: 100px;
+}
+
+.power h6 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 8px;
+}
+
+.fire {
+    position: absolute;
+    background-image: url(img/fire.png);
+    background-size: cover;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    z-index: 3;
+    bottom: 178px;
+    margin-left: 130px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.fire:hover {
+    background-image: url(img/fire.gif);
+}
+
+.img_charizard {
+    height: 90px;
+    width: 120px;
+    background-image: url(img/CHARIZARD.gif);
+    background-size: cover;
+    z-index: 2;
+    position: absolute;
+    margin-left: calc((150px  - 125px)/2);
+    top: 25px;
+    border: 4px solid #ffe659;
+}
+
+.img_charizard:hover {
+    background-image: url(img/animacion.gif);
+}
+
+.card_fondo:hover {
+    transform: rotateY(30deg);
+    transition: .3s;
+}
+
+.card_fondo2 {
+    height: 190px;
+    width: 140px;
+    background-image: url(img/fondo_animado.gif);
+    background-size: cover;
+    border-radius: 5%;
+    position: absolute;
+    z-index: 1;
+    margin-left: calc((150px - 140px)/2);
+    visibility: hidden;
+}
+
+.perspective:hover .card_fondo2 {
+    visibility: visible;
+}
+
+.description {
+    position: absolute;
+    z-index: 3;
+    bottom: 65px;
+    margin-left: 17px;
+    background-image: linear-gradient(rgb(255, 196, 0), rgb(255, 223, 118));
+    height: 8px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.description h3 {
+    font-size: 4.5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+
+.hability {
+    position: absolute;
+    z-index: 3;
+    bottom: 49px;
+    margin-left: 13px;
+    font-size: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkblue;
+}
+
+.hability_details {
+    position: absolute;
+    z-index: 3;
+    bottom: 35px;
+    margin-left: 13px;
+    font-size: 4.5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.fire2 {
+    position: absolute;
+    background-image: url(img/fire.png);
+    background-size: cover;
+    height: 8px;
+    width: 8px;
+    z-index: 3;
+    bottom: 30px;
+    margin-left: 13px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.fire2:hover {
+    background-image: url(img/fire.gif);
+}
+
+.fire3 {
+    position: absolute;
+    background-image: url(img/fire.png);
+    background-size: cover;
+    height: 8px;
+    width: 8px;
+    z-index: 3;
+    bottom: 30px;
+    margin-left: 22px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.fire3:hover {
+    background-image: url(img/fire.gif);
+}
+
+.fire4 {
+    position: absolute;
+    background-image: url(img/fire.png);
+    background-size: cover;
+    height: 8px;
+    width: 8px;
+    z-index: 3;
+    bottom: 30px;
+    margin-left: 31px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.fire4:hover {
+    background-image: url(img/fire.gif);
+}
+
+.fire5 {
+    position: absolute;
+    background-image: url(img/fire.png);
+    background-size: cover;
+    height: 8px;
+    width: 8px;
+    z-index: 3;
+    bottom: 30px;
+    margin-left: 40px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.fire5:hover {
+    background-image: url(img/fire.gif);
+}
+
+.description2 {
+    position: absolute;
+    z-index: 3;
+    bottom: 23px;
+    margin-left: 55px;
+    font-size: 6px;
+    width: 40x;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.description3 {
+    position: absolute;
+    z-index: 3;
+    bottom: 23px;
+    margin-left: 120px;
+    font-size: 6px;
+    width: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.description4 {
+    position: absolute;
+    z-index: 3;
+    bottom: 21px;
+    margin-left: 13px;
+    font-size: 3px;
+    width: 90px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.linea {
+    height: 1px;
+    width: 40px;
+    background-color: rgb(184, 183, 183);
+    z-index: 3;
+    position: absolute;
+    margin-top: 155px;
+    margin-left: 13px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.438);
+}
+
+.debilidad {
+    position: absolute;
+    z-index: 3;
+    bottom: 9px;
+    margin-left: 13px;
+    font-size: 4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: #ffe659;
+    border-radius: 10px;
+    height: 8px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.debilidad:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.resistencia {
+    position: absolute;
+    z-index: 3;
+    bottom: 9px;
+    margin-left: 56px;
+    font-size: 4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: #ffe659;
+    border-radius: 10px;
+    height: 8px;
+    width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.resistencia:hover {
+    background-color: darkred;
+    color: white;
+}
+
+.retirada {
+    position: absolute;
+    z-index: 3;
+    bottom: 9px;
+    margin-left: 100px;
+    font-size: 4px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    background-color: #ffe659;
+    border-radius: 10px;
+    height: 8px;
+    width: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.retirada:hover {
+    background-color: darkred;
+    color: white;
+}
